@@ -19,10 +19,6 @@ test.describe('Авторизация', () => {
       await expect(ssoLoginPage.loginFormFragment.submitButton).toBeVisibleAllure();
     });
 
-    const phone = process.env.SSO_TEST_PHONE;
-    const password = process.env.SSO_TEST_PASSWORD;
-    if (phone && password) {
-      await ssoLoginPage.loginFormFragment.authorize(phone, password);
-    }
+    await ssoLoginPage.loginFormFragment.authorize('79536691903', '1602268');
   });
 });
